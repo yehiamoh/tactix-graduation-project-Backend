@@ -5,6 +5,7 @@ import { errorHandler } from "./middlewares/errorHandler.middleware.js";
 import { connectDB } from "./config/db.config.js";
 import authRouter from "./routes/auth.router.js";
 import profileRouter from "./routes/profile.router.js";
+import matchRouter from "./routes/match.router.js";
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.use("/health", (req, res) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/v1/match", matchRouter);
 
 app.use(errorHandler);
 
