@@ -35,6 +35,7 @@ app.use("/health", (req, res) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
+// cloudinary uploadd approach
 app.use("/api/v1/match", matchRouter);
 
 app.use(errorHandler);
